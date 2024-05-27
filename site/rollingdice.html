@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA TERRA DICE</title>
+
+    <script src="assets/libs/gsap/gsap.min.js" defer></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="assets/libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="assets/css/rollingdice.css">
+    <script src="assets/js/rollingdice.js" defer></script>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="dice-wrapper">
+        <button class="button button--d4">
+            <svg class="button__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 130 130"
+                style="enable-background:new 0 0 130 130;" xml:space="preserve">
+                <g id="XMLID_4_">
+                    <polygon id="XMLID_3_" class="st0" points="68.2,21.8 115.7,109 14.3,109 	" />
+                    <polyline id="XMLID_2_" class="st0" points="115.7,108.7 59.3,65.1 14.3,108.7 	" />
+                    <line id="XMLID_5_" class="st0" x1="68.2" y1="21.5" x2="59.3" y2="65.1" />
+                </g>
+            </svg>
+            <span class="button__text">d4</span>
+        </button>
+
+        <button class="button button--d6">
+            <svg class="button__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 130 130"
+                style="enable-background:new 0 0 130 130;" xml:space="preserve">
+                <g id="XMLID_35_">
+                    <polygon id="XMLID_6_" class="st0"
+                        points="18.6,85.5 21.3,28.1 76.9,11.1 111.4,47.6 111.4,102.2 54.8,118.9 	" />
+                    <polyline id="XMLID_7_" class="st0" points="54.8,118.9 56.8,65 111.4,47.6 	" />
+                    <line id="XMLID_9_" class="st0" x1="56.8" y1="65" x2="21.3" y2="28.1" />
+                </g>
+                </svg>
+                <span class="button__text">d6</span>
+        </button>
+
+        <button class="button button--d8">
+            <svg class="button__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 130 130"
+                style="enable-background:new 0 0 130 130;" xml:space="preserve">
+                <g id="XMLID_34_">
+                    <polygon id="XMLID_8_" class="st0"
+                        points="23,83.2 23,47.5 61.5,13.6 106.4,46.3 103.1,82.8 65.6,116.4 	" />
+                    <path id="XMLID_14_" class="st1" d="M23.7,82.5" />
+                    <path id="XMLID_11_" class="st1" d="M103.1,82.8l-78.4-0.4c-0.3,0-0.5-0.3-0.4-0.6l37.5-67.7c0.1-0.2,0.4-0.2,0.5,0l40.9,68.4
+                                                C103.4,82.7,103.3,82.8,103.1,82.8z" />
+                </g>
+            </svg>
+            <span class="button__text">d8</span>
+        </button>
+
+        <button class="button button--d10">
+            <svg class="button__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 130 130"
+                style="enable-background:new 0 0 130 130;" xml:space="preserve">
+                <g id="XMLID_33_">
+                    <polygon id="XMLID_10_" class="st0"
+                        points="62.3,17.6 15,52.3 12.8,74.8 23.2,90.8 66.1,112.4 112.1,83 117.2,71.4 113,47.4 	" />
+                    <polyline id="XMLID_15_" class="st0"
+                        points="12.8,74.8 32.5,86.2 64.4,100.1 98.2,81.6 117.2,71.4 	" />
+                    <line id="XMLID_17_" class="st0" x1="64.4" y1="100.1" x2="66.1" y2="112.4" />
+                    <path id="XMLID_16_" class="st0" d="M32.2,86.2l29.3-67.5c0.2-0.5,0.9-0.5,1.1-0.1l35.4,62.9" />
+                </g>
+            </svg>
+            <span class="button__text">d10</span>
+        </button>
+
+        <button class="button button--d12">
+            <svg class="button__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 130 130"
+                style="enable-background:new 0 0 130 130;" xml:space="preserve">
+                <g id="XMLID_32_">
+                    <polygon id="XMLID_18_" class="st0" points="19.9,78.2 33.3,97.6 66.2,114.3 93.5,102.5 110,79.2 110,49.6 94.6,27.4 66.9,15.7 
+                                                        39.5,25.3 21.8,49.2 	" />
+                    <polygon id="XMLID_20_" class="st1" points="48.5,74.6 77.8,78.5 92.4,51 67.4,32.8 39.5,49.2 	" />
+                    <line id="XMLID_21_" class="st1" x1="77.8" y1="78.5" x2="93.4" y2="102.5" />
+                    <line id="XMLID_22_" class="st1" x1="48.5" y1="74.6" x2="33.3" y2="97.6" />
+                    <line id="XMLID_23_" class="st0" x1="40" y1="50" x2="23" y2="50" />
+                    <line id="XMLID_24_" class="st1" x1="67.4" y1="32.8" x2="66.9" y2="15.7" />
+                    <line id="XMLID_25_" class="st1" x1="92.4" y1="51" x2="109.9" y2="49.6" />
+                </g>
+            </svg>
+            <span class="button__text">d12</span>
+        </button>
+
+        <button class="button button--d20">
+            <svg class="button__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 130 130"
+                style="enable-background:new 0 0 130 130;" xml:space="preserve">
+                <g id="XMLID_26_">
+                    <polygon id="XMLID_19_" class="st0"
+                        points="65.5,14.9 21.4,43.1 24.9,93.7 68.6,115.1 108,91.8 108,41.3 	" />
+                    <path id="XMLID_27_" class="st1" d="M66,38L41.4,80.4c-0.1,0.2,0,0.6,0.3,0.6l52,0.8c0.3,0,0.5-0.3,0.3-0.6L66.7,38
+                                                C66.5,37.8,66.2,37.8,66,38z" />
+                    <path id="XMLID_29_" class="st1" d="M66.7,38l39.2,3.1c1.3,0.1,2.2,1.5,1.7,2.7l-13.8,38" />
+                    <path id="XMLID_28_" class="st1"
+                        d="M66,14.9L66,38l-43.5,4.9c-0.3,0.1-0.4,0.4-0.2,0.6l19.4,37.4L25.5,93.7" />
+                    <path id="XMLID_47_" class="st1"
+                        d="M108.5,91.8l-14.7-10l-23.9,32.3c-0.3,0.5-1,0.5-1.4,0L41.7,80.9" />
+                    <path id="XMLID_46_" class="st1" d="M41.7,80.9" />
+                    <path id="XMLID_30_" class="st1" d="M93.2,81.8" />
+                </g>
+            </svg>
+            <span class="button__text">d20</span>
+        </button>
+    </div>
+
+    <div class="output">2d6 + 4 = 10</div>
+
+    <div class="dice-control">
+
+        <div class="dice-control__wrapper">
+            <div class="dice-control__input-control">
+                <button id="add-count" class="dice-control__inc-btn">+</button>
+                <button id="sub-count" class="dice-control__inc-btn">-</button>
+            </div>
+            <div class="dice-control__input dice-control__input--count" type="text">2</div>
+        </div>
+        <div class="dice-control__wrapper">
+            <div class="dice-control__input dice-control__input--mod">4</div>
+            <div class="dice-control__input-control">
+                <button id="add-mod" class="dice-control__inc-btn">+</button>
+                <button id="sub-mod" class="dice-control__inc-btn">-</button>
+            </div>
+        </div>
+    </div>
+    <div id="burger-menu">
+        <span></span>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="rollingdice.html">Rolling Dice</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="assets/php/logout.php">Logout</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

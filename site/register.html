@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>NOVA TERRA Register</title>
+    
+    <script src="assets/libs/gsap/gsap.min.js" defer></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="assets/libs/gsap/ScrollSmoother.min.js" defer></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="assets/css/regstyle.css">
+    <script src="assets/js/registerHandler.js" defer></script>
+    <script src="assets/js/reg.js" defer></script>
+    
+</head>
+
+<body>
+    <div id="particles-background" class="vertical-centered-box"></div>
+    <div id="particles-foreground" class="vertical-centered-box"></div>
+    
+    <div class="content">
+        <div class="vertical-centered-box">
+            <div class="form-body">
+                <div class="row">
+                    <div class="form-holder">
+                        <div class="form-content">
+                            <div class="form-items">
+                                <h3>CREATE YOUR CHARACTER</h3>
+                                <p>Image the data below.</p>
+                                <form id="characterForm" method="post" action="assets/php/character.php">
+                                    <div class="form-group">
+                                        <label for="name">Character Name:</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                            <div class="form-group">
+                                <label for="characterPhoto">Foto</label>
+            <input type="file" id="characterPhoto" name="characterPhoto" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label for="class">Class & Level:</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="Barbarian">Barbarian</option>
+                <option value="Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Monk">Monk</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Ranger">Ranger</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Sorcerer">Sorcerer</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Wizard">Wizard</option>
+                <option value="Artificer">Artificer</option>
+                <option value="Blood Hunter">Blood Hunter</option>
+            </select>
+            <!-- <input type="number" id="level" name="level" min="1" max="20" required> -->
+        </div>
+        <button class="stepper" id="level" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="background">Background:</label>
+            <select id="background" name="background" required>
+                <option value="">Select Background</option>
+                <option value="Acolyte">Acolyte</option>
+                <option value="Anthropologist">Anthropologist</option>
+                <option value="Archaeologist">Archaeologist</option>
+                <option value="Athlete">Athlete</option>
+                <option value="Charlatan">Charlatan</option>
+                <option value="City Watch">City Watch</option>
+                <option value="Clan Crafter">Clan Crafter</option>
+                <option value="Cloistered Scholar">Cloistered Scholar</option>
+                <option value="Courtier">Courtier</option>
+                <option value="Criminal">Criminal</option>
+                <option value="Entertainer">Entertainer</option>
+                <option value="Faction Agent">Faction Agent</option>
+                <option value="Far Traveler">Far Traveler</option>
+                <option value="Folk Hero">Folk Hero</option>
+                <option value="Gladiator">Gladiator</option>
+                <option value="Guild Artisan">Guild Artisan</option>
+                <option value="Guild Merchant">Guild Merchant</option>
+                <option value="Haunted One">Haunted One</option>
+                <option value="Hermit">Hermit</option>
+                <option value="Inheritor">Inheritor</option>
+                <option value="Knight">Knight</option>
+                <option value="Knight of the Order">Knight of the Order</option>
+                <option value="Mercenary Veteran">Mercenary Veteran</option>
+                <option value="Noble">Noble</option>
+                <option value="Outlander">Outlander</option>
+                <option value="Pirate">Pirate</option>
+                <option value="Sage">Sage</option>
+                <option value="Sailor">Sailor</option>
+                <option value="Shipwright">Shipwright</option>
+                <option value="Smuggler">Smuggler</option>
+                <option value="Soldier">Soldier</option>
+                <option value="Spy">Spy</option>
+                <option value="Urban Bounty Hunter">Urban Bounty Hunter</option>
+                <option value="Urchin">Urchin</option>
+                <option value="Waterdhavian Noble">Waterdhavian Noble</option>
+            <!-- Add more background options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Sub Class:</label>
+            <input type="text" id="SubClass" name="Sub Class" required>
+        </div>
+        <div class="form-group">
+            <label for="playerName">Player Name:</label>
+            <input type="text" id="playerName" name="playerName">
+        </div>
+        <div class="form-group">
+            <label for="race">Race:</label>
+            <select id="race" name="race" required>
+                <option value="">Select Race</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Elf">Elf</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Human">Human</option>
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Half-Elf">Half-Elf</option>
+                <option value="Half-Orc">Half-Orc</option>
+                <option value="Tiefling">Tiefling</option>
+                <option value="Aarakocra">Aarakocra</option>
+                <option value="Genasi">Genasi</option>
+                <option value="Goliath">Goliath</option>
+                <option value="Kenku">Kenku</option>
+                <option value="Tabaxi">Tabaxi</option>
+                <option value="Triton">Triton</option>
+                <option value="Aasimar">Aasimar</option>
+                <option value="Bugbear">Bugbear</option>
+                <option value="Firbolg">Firbolg</option>
+                <option value="Goblin">Goblin</option>
+                <option value="Hobgoblin">Hobgoblin</option>
+                <option value="Kobold">Kobold</option>
+                <option value="Lizardfolk">Lizardfolk</option>
+                <option value="Orc">Orc</option>
+                <option value="Tortle">Tortle</option>
+                <option value="Yuan-ti Pureblood">Yuan-ti Pureblood</option>
+                <option value="Centaur">Centaur</option>
+                <option value="Gith">Gith</option>
+                <option value="Minotaur">Minotaur</option>
+                <option value="Shifter">Shifter</option>
+                <option value="Warforged">Warforged</option>
+                <option value="Changeling">Changeling</option>
+                <option value="Kalashtar">Kalashtar</option>
+                <option value="Shardmind">Shardmind</option>
+                <option value="Wilden">Wilden</option>
+                <option value="Deva">Deva</option>
+                <option value="Gnoll">Gnoll</option>
+                <option value="Githzerai">Githzerai</option>
+                <option value="Modron">Modron</option>
+                <option value="Owlbear">Owlbear</option>
+                <option value="Rakshasa">Rakshasa</option>
+                <option value="Sahuagin">Sahuagin</option>
+                <option value="Satyr">Satyr</option>
+                <option value="Thri-kreen">Thri-kreen</option>
+                <option value="Troll">Troll</option>
+                <option value="Vedalken">Vedalken</option>
+                <option value="Yuan-ti Abomination">Yuan-ti Abomination</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="alignment">Alignment:</label>
+            <input type="text" id="alignment" name="alignment" required>
+        </div>
+        <div class="form-group">
+            <label for="strength">Strength:</label>
+            <!-- <input type="number" id="strength" name="strength" min="1" required> -->
+        </div>
+        <button class="stepper" id="strength" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="dexterity">Dexterity:</label>
+            <!-- <input type="number" id="dexterity" name="dexterity" min="1" required> -->
+        </div>
+        <button class="stepper" id="dexterity" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="constitution">Constitution:</label>
+            <!-- <input type="number" id="constitution" name="constitution" min="1" required> -->
+        </div>
+        <button class="stepper" id="constitution" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">1</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">2</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="intelligence">Intelligence:</label>
+            <!-- <input type="number" id="intelligence" name="intelligence" min="1" required> -->
+        </div>
+        <button class="stepper" id="intelligence" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="wisdom">Wisdom:</label>
+            <!-- <input type="number" id="wisdom" name="wisdom" min="1" required> -->
+        </div>
+        <button class="stepper" id="wisdom" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="charisma">Charisma:</label>
+            <!-- <input type="number" id="charisma" name="charisma" min="1" required> -->
+        </div>
+        <button class="stepper" id="charisma" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="hitPoints">Hit Points:</label>
+            <!-- <input type="number" id="hitPoints" name="hitPoints" min="1" required> -->
+        </div>
+        <button class="stepper" id="hitPoints" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="armorClass">Armor Class:</label>
+            <!-- <input type="number" id="armorClass" name="armorClass" min="1" required> -->
+        </div>
+        <button class="stepper" id="armorClass" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="speed">Speed:</label>
+            <!-- <input type="number" id="speed" name="speed" min="0" required> -->
+        </div>
+        <button class="stepper" id="speed" type="button" value="0">
+            <span class="stepper__value" data-pos="prev" aria-hidden="true"></span>
+            <span class="stepper__value" data-pos="cur">0</span>
+            <span class="stepper__value" data-pos="next" aria-hidden="true">1</span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="down"></span>
+            </span>
+            <span class="stepper__btn-area">
+                <span class="stepper__btn-click" data-dir="up"></span>
+            </span>
+        </button>
+        <div class="form-group">
+            <label for="skills">Skills (Proficiency Bonus):</label>
+            <textarea id="skills" name="skills" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="equipment">Equipment:</label>
+            <textarea id="equipment" name="equipment" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="features">Features & Traits:</label>
+            <textarea id="features" name="features" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="history">History:</label>
+            <textarea id="history" name="history" rows="4" required></textarea>
+        </div>
+            <button href="profil.html" type="submit" value="Create Character">submit</button>
+    </form>
+</div>
+    <div id="burger-menu">
+        <span></span>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="rollingdice.html">Rolling Dice</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="assets/php/logout.php">Logout</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
